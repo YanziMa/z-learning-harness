@@ -383,7 +383,8 @@ OUTPUT:
 }
 
 function checkReviewScore(taskId) {
-  const reportPath = join(HARNESS_ROOT, 'reviewer', 'reports', `${taskId}.json`);
+  // Agents write reports to PROJECT_ROOT, not HARNESS_ROOT
+  const reportPath = join(PROJECT_ROOT, 'reviewer', 'reports', `${taskId}.json`);
   try {
     if (!existsSync(reportPath)) return { passed: false, score: 0 };
     const report = JSON.parse(readFileSync(reportPath, 'utf-8'));
@@ -411,22 +412,36 @@ SCORE THRESHOLDS:
 - 70-89%: Acceptable (critical checks pass, minor warnings)
 - < 70%: Needs fix (critical check failed)
 
-Write score to scorer/latest-score.json with:
-{ task, timestamp, build_passed, tests_passed, functional_checks: {}, score, issues[] }`;
+Write score to BOTH:
+  - scorer/latest-score.json (for quick reference)
+  - scorer/${task.id}-score.json (per-task, won't be overwritten by next task)
+
+Format: { task, timestamp, build_passed, tests_passed, functional_checks: {}, score, issues[] }`;
 
   return runAgent('Scorer', scorerPrompt, 10 * 60 * 1000);
 }
 
 function checkScorerScore(taskId) {
-  const scorePath = join(HARNESS_ROOT, 'scorer', 'latest-score.json');
-  try {
-    if (!existsSync(scorePath)) return null;
-    const data = JSON.parse(readFileSync(scorePath, 'utf-8'));
-    if (data.task === taskId) return data.score;
-    return null;
-  } catch {
-    return null;
+  // Agents write scores to PROJECT_ROOT, not HARNESS_ROOT
+  // First try per-task score file, then fall back to latest-score.json
+  const perTaskPath = join(PROJECT_ROOT, 'scorer', `${taskId}-score.json`);
+  const latestPath = join(PROJECT_ROOT, 'scorer', 'latest-score.json');
+  for (const scorePath of [perTaskPath, latestPath]) {
+    try {
+      if (!existsSync(scorePath)) continue;
+      const data = JSON.parse(readFileSync(scorePath, 'utf-8'));
+      if (data.task === taskId) return data.score;
+    } catch {}
   }
+  // Fallback: read latest-score.json even if task field doesn't match
+  // (scorer writes sequentially, so if it just ran for this task, use it)
+  try {
+    if (existsSync(latestPath)) {
+      const data = JSON.parse(readFileSync(latestPath, 'utf-8'));
+      return data.score ?? null;
+    }
+  } catch {}
+  return null;
 }
 
 // ── Main Pipeline ──
@@ -439,9 +454,10 @@ async function main() {
 
   // Filter specific tasks if requested
   if (SPECIFIC_TASKS) {
-    tasks = tasks.filter(t => SPECIFIC_TASKS.includes(t.id));
+    tasks = tasks.filter(t => SPECIFIC_TASKS.includes(t.id) || SPECIFIC_TASKS.includes(String(t.issueNumber)));
     if (tasks.length === 0) {
       console.error('ERROR: No matching tasks for --tasks filter');
+      console.error('  Available tasks:', tasks.map(t => t.id).join(', '));
       process.exit(1);
     }
   }
