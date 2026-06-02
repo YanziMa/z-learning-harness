@@ -1,0 +1,9 @@
+{
+  "task_id": "issue-8",
+  "label": "Phase 5: 互动教学内容生成 Prompt + Quiz闭环引擎",
+  "priority": "P0",
+  "assignee": "YanziMa",
+  "coder_brief": "Implement the feature described in GitHub Issue #8: Phase 5: 互动教学内容生成 Prompt + Quiz闭环引擎.\n\nRun: gh issue view 8 --repo YanziMa/z-learning\n\nRead the issue body for detailed requirements, acceptance criteria, and interface contracts.",
+  "project_root": "C:\\Users\\13681\\z-learning",
+  "timestamp": "2026-06-02T05:31:44.095Z"
+}

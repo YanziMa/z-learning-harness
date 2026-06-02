@@ -1,0 +1,9 @@
+{
+  "task_id": "issue-9",
+  "label": "Phase 5: 互动教学分步 UI + 点灯动画 + 完成仪式",
+  "priority": "P0",
+  "assignee": "BlerTNN",
+  "coder_brief": "Implement the feature described in GitHub Issue #9: Phase 5: 互动教学分步 UI + 点灯动画 + 完成仪式.\n\nRun: gh issue view 9 --repo YanziMa/z-learning\n\nRead the issue body for detailed requirements, acceptance criteria, and interface contracts.",
+  "project_root": "C:\\Users\\13681\\z-learning",
+  "timestamp": "2026-06-02T05:31:44.090Z"
+}

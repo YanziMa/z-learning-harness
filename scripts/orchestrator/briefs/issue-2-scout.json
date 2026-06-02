@@ -1,0 +1,9 @@
+{
+  "task_id": "issue-2",
+  "label": "Phase 1: 知识图谱数据整理 + KnowledgeGraph 引擎类",
+  "priority": "P0",
+  "assignee": "YanziMa",
+  "coder_brief": "Implement the feature described in GitHub Issue #2: Phase 1: 知识图谱数据整理 + KnowledgeGraph 引擎类.\n\nRun: gh issue view 2 --repo YanziMa/z-learning\n\nRead the issue body for detailed requirements, acceptance criteria, and interface contracts.",
+  "project_root": "C:\\Users\\13681\\z-learning",
+  "timestamp": "2026-06-02T05:31:44.128Z"
+}

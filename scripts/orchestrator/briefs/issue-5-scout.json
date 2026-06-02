@@ -1,0 +1,9 @@
+{
+  "task_id": "issue-5",
+  "label": "Phase 3: 自适应诊断测试 UI + 诊断结果展示",
+  "priority": "P0",
+  "assignee": "BlerTNN",
+  "coder_brief": "Implement the feature described in GitHub Issue #5: Phase 3: 自适应诊断测试 UI + 诊断结果展示.\n\nRun: gh issue view 5 --repo YanziMa/z-learning\n\nRead the issue body for detailed requirements, acceptance criteria, and interface contracts.",
+  "project_root": "C:\\Users\\13681\\z-learning",
+  "timestamp": "2026-06-02T05:31:44.110Z"
+}

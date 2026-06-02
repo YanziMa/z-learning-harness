@@ -1,0 +1,9 @@
+{
+  "task_id": "issue-11",
+  "label": "Demo 题库：50 知识点 × 4 道题（AI 生成+人工校验）",
+  "priority": "P0",
+  "assignee": "YanziMa",
+  "coder_brief": "Implement the feature described in GitHub Issue #11: Demo 题库：50 知识点 × 4 道题（AI 生成+人工校验）.\n\nRun: gh issue view 11 --repo YanziMa/z-learning\n\nRead the issue body for detailed requirements, acceptance criteria, and interface contracts.",
+  "project_root": "C:\\Users\\13681\\z-learning",
+  "timestamp": "2026-06-02T05:31:44.079Z"
+}

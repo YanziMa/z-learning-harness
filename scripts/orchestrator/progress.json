@@ -1,0 +1,123 @@
+{
+  "current_step_index": 10,
+  "completed": [
+    {
+      "task": "issue-11",
+      "review_score": null,
+      "scorer_score": null,
+      "step": 1
+    },
+    {
+      "task": "issue-10",
+      "review_score": null,
+      "scorer_score": null,
+      "step": 2
+    },
+    {
+      "task": "issue-9",
+      "review_score": null,
+      "scorer_score": null,
+      "step": 3
+    },
+    {
+      "task": "issue-8",
+      "review_score": null,
+      "scorer_score": null,
+      "step": 4
+    },
+    {
+      "task": "issue-7",
+      "review_score": null,
+      "scorer_score": null,
+      "step": 5
+    },
+    {
+      "task": "issue-6",
+      "review_score": null,
+      "scorer_score": null,
+      "step": 6
+    },
+    {
+      "task": "issue-5",
+      "review_score": null,
+      "scorer_score": null,
+      "step": 7
+    },
+    {
+      "task": "issue-4",
+      "review_score": null,
+      "scorer_score": null,
+      "step": 8
+    },
+    {
+      "task": "issue-3",
+      "review_score": null,
+      "scorer_score": null,
+      "step": 9
+    },
+    {
+      "task": "issue-2",
+      "review_score": null,
+      "scorer_score": null,
+      "step": 10
+    },
+    {
+      "task": "issue-1",
+      "review_score": null,
+      "scorer_score": null,
+      "step": 11
+    }
+  ],
+  "failed": [],
+  "scores": {
+    "issue-11": {
+      "review": null,
+      "scorer": null
+    },
+    "issue-10": {
+      "review": null,
+      "scorer": null
+    },
+    "issue-9": {
+      "review": null,
+      "scorer": null
+    },
+    "issue-8": {
+      "review": null,
+      "scorer": null
+    },
+    "issue-7": {
+      "review": null,
+      "scorer": null
+    },
+    "issue-6": {
+      "review": null,
+      "scorer": null
+    },
+    "issue-5": {
+      "review": null,
+      "scorer": null
+    },
+    "issue-4": {
+      "review": null,
+      "scorer": null
+    },
+    "issue-3": {
+      "review": null,
+      "scorer": null
+    },
+    "issue-2": {
+      "review": null,
+      "scorer": null
+    },
+    "issue-1": {
+      "review": null,
+      "scorer": null
+    }
+  },
+  "start_time": "2026-06-02T05:31:44.051Z",
+  "phase": "complete",
+  "end_time": "2026-06-02T05:31:44.138Z",
+  "total_minutes": 0,
+  "total_polish_rounds": 0
+}
