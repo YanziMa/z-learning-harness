@@ -457,14 +457,18 @@ async function main() {
     tasks = tasks.filter(t => SPECIFIC_TASKS.includes(t.id) || SPECIFIC_TASKS.includes(String(t.issueNumber)));
     if (tasks.length === 0) {
       console.error('ERROR: No matching tasks for --tasks filter');
-      console.error('  Available tasks:', tasks.map(t => t.id).join(', '));
+      console.error('  Available:', (loadIssuesAsTasks() || DEFAULT_TASKS).map(t => t.id).join(', '));
       process.exit(1);
     }
+    // When --tasks is specified, start fresh (don't resume from stale progress)
+    log('  --tasks specified: starting fresh (ignoring previous progress resume)');
   }
 
-  // Resume from progress
+  // Resume from progress (only when NOT using --tasks filter)
   const progress = loadProgress();
-  const resumeIndex = Math.max(START_AT, progress.current_step_index || 0);
+  const resumeIndex = SPECIFIC_TASKS
+    ? Math.max(START_AT, 0)  // --tasks: start from beginning
+    : Math.max(START_AT, progress.current_step_index || 0);
   tasks = tasks.slice(resumeIndex);
 
   console.log('\n' + '='.repeat(60));
