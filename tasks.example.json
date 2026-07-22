@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "tasks": [
+    {
+      "id": "add-health-endpoint",
+      "title": "Add a health endpoint",
+      "description": "Add a small health endpoint without changing unrelated public behavior.",
+      "acceptanceCriteria": [
+        "The health endpoint returns a successful response",
+        "The response contains a machine-readable healthy status",
+        "Existing tests continue to pass"
+      ],
+      "editablePaths": [
+        "src/",
+        "test/",
+        "package.json"
+      ],
+      "requiredChecks": [
+        "test"
+      ],
+      "dependsOn": []
+    }
+  ]
+}

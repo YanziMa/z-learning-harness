@@ -1,9 +1,0 @@
-{
-  "task_id": "issue-6",
-  "label": "Phase 4: 学习路径规划引擎 PathPlanner",
-  "priority": "P0",
-  "assignee": "YanziMa",
-  "coder_brief": "Implement the feature described in GitHub Issue #6: Phase 4: 学习路径规划引擎 PathPlanner.\n\nRun: gh issue view 6 --repo YanziMa/z-learning\n\nRead the issue body for detailed requirements, acceptance criteria, and interface contracts.",
-  "project_root": "C:\\Users\\13681\\z-learning",
-  "timestamp": "2026-06-02T05:31:44.105Z"
-}

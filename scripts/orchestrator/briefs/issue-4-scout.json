@@ -1,9 +1,0 @@
-{
-  "task_id": "issue-4",
-  "label": "Phase 3: 简化版 CAT 自适应选题算法 + 掌握度模型",
-  "priority": "P0",
-  "assignee": "YanziMa",
-  "coder_brief": "Implement the feature described in GitHub Issue #4: Phase 3: 简化版 CAT 自适应选题算法 + 掌握度模型.\n\nRun: gh issue view 4 --repo YanziMa/z-learning\n\nRead the issue body for detailed requirements, acceptance criteria, and interface contracts.",
-  "project_root": "C:\\Users\\13681\\z-learning",
-  "timestamp": "2026-06-02T05:31:44.115Z"
-}
