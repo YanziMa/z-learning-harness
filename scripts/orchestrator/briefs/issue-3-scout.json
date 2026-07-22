@@ -1,9 +1,0 @@
-{
-  "task_id": "issue-3",
-  "label": "Phase 1: 知识图谱可视化改造",
-  "priority": "P0",
-  "assignee": "BlerTNN",
-  "coder_brief": "Implement the feature described in GitHub Issue #3: Phase 1: 知识图谱可视化改造.\n\nRun: gh issue view 3 --repo YanziMa/z-learning\n\nRead the issue body for detailed requirements, acceptance criteria, and interface contracts.",
-  "project_root": "C:\\Users\\13681\\z-learning",
-  "timestamp": "2026-06-02T05:31:44.122Z"
-}

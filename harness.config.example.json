@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "projectRoot": "../your-project",
+  "stateDir": ".harness",
+  "taskSource": {
+    "type": "manifest",
+    "path": "tasks.json"
+  },
+  "agent": {
+    "command": "claude",
+    "model": "sonnet",
+    "bare": true,
+    "maxTurns": 50,
+    "maxBudgetUsd": 5,
+    "timeoutsMs": {
+      "coder": 1200000,
+      "reviewer": 900000,
+      "scorer": 600000
+    }
+  },
+  "passEnv": [
+    "ANTHROPIC_API_KEY"
+  ],
+  "checks": [
+    {
+      "id": "test",
+      "command": "npm",
+      "args": ["test"],
+      "cwd": ".",
+      "timeoutMs": 600000
+    }
+  ],
+  "policy": {
+    "scoreThreshold": 70,
+    "maxCoderAttempts": 3,
+    "maxPolishPerTask": 3,
+    "maxTotalPolish": 15,
+    "minImprovement": 2,
+    "maxConsecutiveFailures": 3,
+    "maxRunMinutes": 120
+  }
+}

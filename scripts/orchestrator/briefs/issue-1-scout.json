@@ -1,9 +1,0 @@
-{
-  "task_id": "issue-1",
-  "label": "Phase 0: Tenant 架构搭建",
-  "priority": "P0",
-  "assignee": "YanziMa",
-  "coder_brief": "Implement the feature described in GitHub Issue #1: Phase 0: Tenant 架构搭建.\n\nRun: gh issue view 1 --repo YanziMa/z-learning\n\nRead the issue body for detailed requirements, acceptance criteria, and interface contracts.",
-  "project_root": "C:\\Users\\13681\\z-learning",
-  "timestamp": "2026-06-02T05:31:44.134Z"
-}
