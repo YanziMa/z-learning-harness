@@ -1,6 +1,6 @@
 # Z-Learning Multi-Agent Closed-Loop Harness
 
-> 基于 linear-clone 的 Scout-Coder-Reviewer-Scorer-Orchestrator 模式，适配 Z-Learning 项目
+> 基于 Scout-Coder-Reviewer-Scorer-Orchestrator 模式，适配 Z-Learning 项目
 
 ## 架构
 
